@@ -1,0 +1,266 @@
+.playlist {
+    font-family: 'Inter', sans-serif;
+}
+
+.playlist__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.playlist__title {
+    font-size: 24px;
+    color: white;
+    text-transform: capitalize;
+}
+
+.playlist__tracks.loading {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.track:hover,
+.track.active {
+    background-color: #1F2021;
+}
+
+.track__img {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #414344;
+    margin-right: 11px;
+    position: relative;
+}
+
+.track__img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.track__img::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.track:hover .track__img::before,
+.track.active.stoped .track__img::before {
+    content: url('../img/play.svg');
+}
+
+.track.active .track__img::before {
+    content: url('../img/pause.svg');
+}
+
+.track.active.end .track__img::before {
+    content: url('../img/repeat.svg');
+}
+
+.track:hover .track__img img,
+.track.active .track__img img,
+.track.active.end .track__img img {
+    display: none;
+}
+
+.track__right {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.track.active .track__right {
+    display: none;
+}
+
+.track__inf {
+    flex-grow: 1;
+}
+
+.track__title {
+    font-size: 14px;
+    font-weight: 600px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.track__performer {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.track__date {
+    margin-right: 64px;
+    font-family: 'Inter';
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .track__date {
+        display: none;
+    }
+}
+
+.track__like {
+    display: flex;
+    align-items: center;
+    margin: 0px 64px 0px 10px;
+}
+
+@media (max-width: 425px) {
+    .track__like {
+        margin-right: 20px;
+    }
+}
+
+.track__like .count {
+    font-size: 14px;
+    color: white;
+    margin-left: 9px;
+}
+
+.track__like img.liked-img {
+    display: none;
+}
+
+.track__like.liked img.like-img {
+    display: none;
+}
+
+.track__like.liked img.liked-img {
+    display: inline-block;
+}
+
+.track__time {
+    font-size: 12px;
+    color: white;
+}
+
+.play {
+    flex-grow: 1;
+    overflow: hidden;
+    display: none;
+}
+
+.track.active .play {
+    display: flex;
+}
+
+.play__title {
+    font-size: 14px;
+    font-weight: 600px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.play__left {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.play__progressbar {
+    flex-grow: 1;
+    height: 2px;
+    border-radius: 12px;
+    background-color: #414344;
+    margin-bottom: 8px;
+    transition: all 0.2s linear;
+    position: relative;
+}
+
+.play__left:hover .play__progressbar {
+    height: 10px;
+}
+
+.play__progressbar .progress,
+.play__progressbar .rewind-progress {
+    width: 0%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: #FF4136;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.play__progressbar .rewind-progress {
+    opacity: 0.2;
+}
+
+.play__volume {
+    display: flex;
+    align-items: center;
+}
+
+.play__volume img {
+    margin-right: 5px;
+}
+
+.play__volume img.off {
+    display: none;
+}
+
+.play__volume.off img.on {
+    display: none;
+}
+
+.play__volume.off img.off {
+    display: inline-block;
+}
+
+.play__volume input[type=range] {
+    -webkit-appearance: none;
+    width: 52px;
+    cursor: pointer;
+    opacity: 0;
+    margin-right: -52px;
+    transition: all 0.5s linear;
+}
+
+.play__volume:hover input[type=range] {
+    opacity: 1;
+    margin-right: 0px;
+    transition: all 0.5s linear;
+}
+
+.play__volume input[type=range]::-webkit-slider-runnable-track {
+    height: 3px;
+    border: none;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.play__volume input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-top: -5px;
+    background-color: white;
+}
+
+.play__times {
+    font-size: 12px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
