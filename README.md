@@ -6,4 +6,4 @@ echo playlist in template
 ```
 
 ![alt text](https://github.com/SidunOleh/WP-playlists/blob/main/public/img/playlists.png?raw=true)
-![alt text](https://github.com/SidunOleh/WP-playlists/blob/main/public/img/playlists-calendar.png?raw=true)
+![alt text](https://github.com/SidunOleh/playlists/blob/main/public/img/playlists-calendar.png?raw=true)
