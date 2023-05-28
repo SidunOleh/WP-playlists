@@ -18,6 +18,10 @@
     position: relative;
 }
 
+.calendar-btn:hover {
+    background-color: #26292a;
+}
+
 .calendar-btn .calendar-body {
     cursor: auto;
 }
@@ -346,6 +350,14 @@
     background-color: #414344;
 }
 
+.calendar-body__btn-cancel:hover {
+    background-color: #26292a;
+}
+
 .calendar-body__btn-apply {
     background-color: #FF4136;
+}
+
+.calendar-body__btn-apply:hover {
+    background-color: #8f0800;
 }
