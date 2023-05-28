@@ -54,14 +54,18 @@
                 </div>
                 <div class="calendar-body__calendar calendar">
                     <div class="calendar__top">
-                        <img class="calendar__prev" src="<?php echo plugin_dir_url(  dirname( __FILE__ ) ) ?>img/prev.svg" alt="">
+                        <div class="calendar__prev">
+                            <img src="<?php echo plugin_dir_url(  dirname( __FILE__ ) ) ?>img/prev.svg" alt="">
+                        </div>
                         <span class="calendar__month">
                             <?php echo date('M') ?>
                         </span>
                         <span class="calendar__year">
                             <?php echo date('Y') ?>
                         </span>
-                        <img class="calendar__next" src="<?php echo plugin_dir_url(  dirname( __FILE__ ) ) ?>img/next.svg" alt="">
+                        <div class="calendar__next">
+                            <img src="<?php echo plugin_dir_url(  dirname( __FILE__ ) ) ?>img/next.svg" alt="">
+                        </div>
                     </div>
                     <div class="calendar__week">
                         <span><?php _e( 'Su' ) ?></span>
