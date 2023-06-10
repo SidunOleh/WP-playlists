@@ -61,7 +61,7 @@ class SOVA_Playlists_Public
         $enable_calendar = carbon_get_post_meta( $playlist->ID, 'playlist_calendar' );
 		
 		if ( $enable_calendar ) {
-            $tracks = self::getLastWeekTracks( $tracks );
+            $tracks = self::last_week_tracks( $tracks );
         }
 
         require plugin_dir_path( __FILE__ ) . '/templates/playlist.php';
@@ -80,7 +80,7 @@ class SOVA_Playlists_Public
         return $posts[0];
     }
 
-    private static function getLastWeekTracks( array $tracks )
+    private static function last_week_tracks( array $tracks )
     {
         return array_filter( 
             $tracks, 
