@@ -1,4 +1,4 @@
-# Playlists for WordPress with calendar
+# Playlists for WordPress
 
 echo playlist in template
 ```
