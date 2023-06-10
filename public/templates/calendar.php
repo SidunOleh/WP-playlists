@@ -58,10 +58,10 @@
                             <img src="<?php echo plugin_dir_url(  dirname( __FILE__ ) ) ?>img/prev.svg" alt="">
                         </div>
                         <span class="calendar__month">
-                            <?php echo date('M') ?>
+                            <?php echo date( 'M' ) ?>
                         </span>
                         <span class="calendar__year">
-                            <?php echo date('Y') ?>
+                            <?php echo date( 'Y' ) ?>
                         </span>
                         <div class="calendar__next">
                             <img src="<?php echo plugin_dir_url(  dirname( __FILE__ ) ) ?>img/next.svg" alt="">
